@@ -1,6 +1,6 @@
 # improvedsegan
 This repository is an extension of GAN based speech enhancement model called SEGAN, and we present two modifications to make the training model more robust and stable. 
-The SEGAN original paper can be found [here](https://arxiv.org/abs/1703.09452) and the script is publicly available [here] (https://github.com/santi-pdp/segan). The source code, and content of this README file is mostly based on the original SEGAN project. 
+The SEGAN original paper can be found [here](https://arxiv.org/abs/1703.09452) and the script is publicly available [here](https://github.com/santi-pdp/segan). The source code, and content of this README file is mostly based on the original SEGAN project. 
 
 ### Introduction
 
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 ### Data
 
-In this work, two speech enhancement dataset is used. The first one is device recorded version of VCTK corpus which will be publicly available soon. The second dataset is [(Valentini et al. 2016)](http://ssw9.net/papers/ssw9_PS2-4_Valentini-Botinhao.pdf) can be found in [Edinburgh DataShare](http://datashare.is.ed.ac.uk/handle/10283/1942). However, **the following script downloads and prepares the second dataset for TensorFlow format**:
+In this work, two speech enhancement dataset is used. The first one is device recorded version of VCTK corpus which will be publicly available soon. The second dataset is [(Valentini et al. 2016)](http://ssw9.net/papers/ssw9_PS2-4_Valentini-Botinhao.pdf) can be found in [Edinburgh DataShare](http://datashare.is.ed.ac.uk/handle/10283/1942). However, the following script downloads and prepares the second dataset for TensorFlow format:
 
 ```
 ./prepare_data.sh
@@ -66,7 +66,7 @@ CUDA_VISIBLE_DEVICES="" python main.py --init_noise_std 0. --save_path segan_v1 
 To make things easy, there is a bash script called `clean_wav.sh` that accepts as input argument the test filename and
 the save path.
 
-%%% Modifications %%%
+### Modifications ###
 Currently input arguments of clean_wav.sh can be test filename or test foldername. The structure for multiple wav testing is improved. In this implementation, for the last chunk instead of zero padding, we pre-padded it with previous samples. We implement residual output in generator using element-wise sum of noisy input with enhanced output. We implement directional initialization in GAN with using 2 interations in generator. In the first iteration of first phase, the loss function will be computed between the clean speech and output of the generator, and in the second iteration will be computed between pre-trained baseline model and output of the generator. With --baseline_remove_epoch input argument in main.py you can set the epoch threshold for removing the extra baseline iteration in generator. In cfg/e2e_maker.cfg in addition of clean and noisy folder, you must set the address of baseline folder.
 
 
