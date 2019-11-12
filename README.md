@@ -90,7 +90,7 @@ e-mail: santi.pascual@upc.edu
 ```
 @article{sarfjoo2019improved,
   title={Transformation of low-quality device-recorded speech to high-quality speech using improved SEGAN model},
-  author={Sarfjoo, Seyyed Saeed and Wang, Xin and Henter, Eje Gustav and Lorenzo-Trueba, Jaime and Takaki, Shinji and Yamagishi, Junichi},
+  author={Sarfjoo, Seyyed Saeed and Wang, Xin and Eje-Henter, Gustav and Lorenzo-Trueba, Jaime and Takaki, Shinji and Yamagishi, Junichi},
   journal={arXiv preprint arXiv:1911.03952},
   year={2019}
 }
