@@ -1,5 +1,5 @@
 # improvedsegan
-This repository is an extension of GAN based speech enhancement model called SEGAN, and we present two modifications to make the training model more robust and stable. The details of implementation and introduction of the device recorded version of VCTK dataset (DRVCTK) are explained in [our paper](http://arxiv.org/abs/1911.03952).   
+This repository is an extension of GAN based speech enhancement model called SEGAN, and we present two modifications to make the training model more robust and stable. The details of implementation and introduction of the device recorded version of VCTK dataset ([DRVCTK](https://129.215.41.53/handle/10283/3038)) are explained in [our paper](http://arxiv.org/abs/1911.03952).   
 The SEGAN original paper can be found [here](https://arxiv.org/abs/1703.09452) and the script is publicly available [here](https://github.com/santi-pdp/segan). The source code, and content of this README file is mostly based on the original SEGAN project. 
 
 ### Introduction
